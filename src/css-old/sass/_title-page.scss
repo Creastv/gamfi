@@ -1,0 +1,101 @@
+.ptbi-white {
+  background-color: #fff;
+  padding: 0 20px;
+  min-height: 135px;
+  border-bottom: 1px solid #eeeeee;
+
+  @media #{$sm} {
+    min-height: 90px;
+  }
+  @media #{$xs} {
+    min-height: 70px;
+  }
+}
+.page-title-bar-inner {
+  border-bottom-width: 0px;
+  border-bottom-color: rgba(0, 0, 0, 0);
+  padding-top: 196px;
+  padding-bottom: 114px;
+  background-color: #fff;
+  background-image: linear-gradient(-180deg, #fff 0, #eceefa 100%);
+  @media #{$sm} {
+    padding-top: 160px;
+    padding-bottom: 150px;
+  }
+  @media #{$xs} {
+    padding-top: 100px;
+    padding-bottom: 10px;
+  }
+  .page-title {
+    font-size: 48px;
+    line-height: 1.17;
+    @media #{$sm} {
+      font-size: 36px;
+    }
+    @media #{$xs} {
+      font-size: 30px;
+    }
+  }
+}
+.page-content {
+  padding-bottom: 100px;
+  padding-top: 100px;
+  width: 100%;
+  margin: 0;
+  @media #{$xs} {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+}
+.single .page-content {
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+.single #breadcrumbs {
+  text-align: left;
+}
+.post-template-single-no-bar-php #breadcrumbs,
+.podcast-template-default #breadcrumbs,
+.use-case-template-default #breadcrumbs,
+.case-study-template-case-study-full-width #breadcrumbs {
+  text-align: center !important;
+}
+
+#breadcrumbs {
+  margin-top: 24px;
+  text-align: center;
+  span {
+    color: #555555;
+    font-size: 14px;
+    letter-spacing: 2px;
+    line-height: 1.58;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: #999999;
+    transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+    position: relative;
+    &:hover {
+      color: $main;
+      &:after {
+        background: $main;
+        width: 100%;
+        left: 0;
+        right: auto;
+      }
+    }
+    &:after {
+      content: "";
+      width: 0;
+      height: 1px;
+      bottom: 0;
+      position: absolute;
+      left: auto;
+      right: 0;
+      z-index: 1;
+      transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+      background: currentColor;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+$xxxs: "only screen and (max-width: 320px)";
+$xxs: "only screen and (max-width: 568px)";
+$xs: "only screen and (max-width: 768px)";
+$sm: "only screen and (max-width: 992px)";
+$md: "only screen and (max-width: 1200px)";
+$lg2: "only screen and (max-width: 1300px)";
+$lg: "only screen and (max-width: 1400px)";
+$xlg: "only screen and (max-width: 1450px)";
+
+.g-testimonial {
+  padding: 50px 0;
+  position: relative;
+  @media #{$sm} {
+    padding: 20px 0;
+  }
+  .wraper {
+    padding: 20px 70px;
+    @media #{$sm} {
+      padding: 20px;
+    }
+    .who {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .left {
+        img {
+          width: 75px;
+          height: 75px;
+          border-radius: 100%;
+          margin-right: 15px;
+        }
+      }
+      .right {
+        h3 {
+          margin-bottom: 5px;
+          font-size: 21px;
+          color: #ff7800;
+        }
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  .swiper-pagination-bullet-active {
+    background-color: #ff7800;
+  }
+  .arrow {
+    @media #{$md} {
+      display: none;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      background-color: #ff7800;
+      width: 40px;
+      height: 40px;
+      border-radius: 100%;
+      //   border: 1px solid $light-black;
+
+      //   left: 0;
+      //   bottom: 0;
+      @media #{$md} {
+        top: 0;
+        bottom: inherit;
+        left: inherit;
+        right: 70px;
+      }
+      &:after {
+        font-size: 14px;
+        color: #fff;
+      }
+      &:hover {
+        font-size: 14px;
+        background-color: black;
+        &:after {
+          color: #fff;
+        }
+      }
+    }
+    .swiper-button-prev {
+      left: 0;
+    }
+    .swiper-button-next {
+      right: 0px;
+      z-index: 2;
+      @media #{$md} {
+        left: inherit;
+        right: 10px;
+      }
+    }
+  }
+}

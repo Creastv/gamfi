@@ -1,0 +1,19 @@
+$xxxs: "only screen and (max-width: 320px)";
+$xxs: "only screen and (max-width: 568px)";
+$xs: "only screen and (max-width: 768px)";
+$sm: "only screen and (max-width: 992px)";
+$md: "only screen and (max-width: 1200px)";
+$lg2: "only screen and (max-width: 1300px)";
+$lg: "only screen and (max-width: 1400px)";
+$xlg: "only screen and (max-width: 1450px)";
+
+.g-swiper {
+  .swiper-slide {
+    .wraper {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

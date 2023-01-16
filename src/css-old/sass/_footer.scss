@@ -1,0 +1,126 @@
+#footer {
+  background: #fff;
+  border-top: 1px solid#eeeeee;
+  padding-top: 88px;
+  // padding-bottom: 17px;
+  .widget-title {
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    color: #222222;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    li {
+      position: relative;
+      &:after {
+        content: "";
+        width: 0;
+        height: 1px;
+        bottom: 0;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        right: auto;
+        z-index: -1;
+        transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+        background: $main;
+      }
+      a {
+        font-size: 16px;
+        font-weight: 400;
+        color: #555555;
+        padding: 5px 10px;
+        display: block;
+        position: relative;
+
+        &:hover {
+          color: $main;
+          &:after {
+            width: 100%;
+            left: 0;
+            right: auto;
+          }
+        }
+      }
+    }
+  }
+  #info {
+    border-top: 1px solid#eeeeee;
+    padding-top: 31px;
+    padding-bottom: 31px;
+    margin-top: 88px;
+    .wraper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media #{$xs} {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .left {
+        @media #{$xs} {
+          width: 100%;
+          text-align: center;
+          order: 2;
+        }
+        p {
+          margin: 0;
+          font-size: 16px;
+        }
+      }
+      .right {
+        @media #{$xs} {
+          width: 100%;
+          align-items: center;
+          order: 1;
+          margin-bottom: 15px;
+        }
+        ul {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: flex;
+          align-items: center;
+          @media #{$xs} {
+            justify-content: center;
+          }
+          li {
+            margin: 10px;
+            a {
+              font-size: 18px;
+              display: block;
+              text-align: center;
+              height: 48px;
+              width: 48px;
+              background: transparent;
+              color: #696969;
+              border: 1px solid #ededed;
+              border-radius: 50%;
+              position: relative;
+              transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+              &:hover {
+                background: $main;
+                i {
+                  color: #fff;
+                }
+              }
+              i {
+                transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

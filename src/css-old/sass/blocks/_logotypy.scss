@@ -1,0 +1,25 @@
+.logotypy{
+    .swiper-wrapper{
+        .swiper-slide{
+            text-align: center;
+        }
+    }
+    img{
+        filter: grayscale(100%);
+        max-width: 100%;
+        height: auto;
+        opacity: .3;
+        transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
+        &:hover{
+            filter: grayscale(0%);
+           opacity: 1;
+        }
+    }
+    .swiper-wrapper{
+        justify-content: center;
+        @media #{$sm}{
+            justify-content:end ;
+        }
+    }
+    
+}

@@ -1,0 +1,37 @@
+.counter-simple {
+    .wraper{
+        display: flex;
+        justify-content: space-between;
+        @media #{$md}{
+            flex-wrap: wrap;
+            text-align: center;
+            justify-content: center;
+        }
+        .count{
+            padding: 20px;
+            text-align: center;
+            @media #{$md}{
+                min-width: 25%;
+                padding: 10px;
+            }
+            @media #{$sm}{
+                min-width: 50%;
+            }
+            h3{
+                font-size: 24px;
+            }
+            .timer, .pref{
+                font-size: 56px;
+                font-weight: 400;
+                line-height: 1.29;
+                color:$main;
+                margin: 15px 0 30px;
+            }
+            .caption{
+                margin-top: 15px;
+
+            }
+        }
+    }
+
+}

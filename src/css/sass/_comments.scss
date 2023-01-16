@@ -1,0 +1,50 @@
+#comments{
+    padding: 30px 15px;
+    .comments-title{
+        font-size: 21px;
+    }
+    .form-submit{
+        #submit{
+            background:none;
+            border-color: #0085ff;
+            color: #0085ff;
+            &:hover{
+                background-image: linear-gradient(218deg,#0085ff 0,#00aaf9 50%,#0085ff 100%);
+                color: #fff;
+            }
+        }
+
+    }
+    .comment-list{
+        list-style: none;
+        li{
+            article{
+                background: #f8f8f8;
+                padding: 10px;
+                border-radius:5px;
+                .comment-meta{
+                    display: flex;
+                    justify-content: space-between;
+                    time{
+                        font-size: 12px;
+                    }
+                    .edit-link{
+                        font-size: 12px;
+                        padding: 3px;
+                        margin: 10px;
+                        border-radius:3px;
+                        border:1px solid $main;
+                    }
+                    .comment-author.vcard{
+                        img{
+                            display: none;
+                        }
+                    }
+                }
+                .comment-content{
+                    padding: 10px 0;
+                }
+            }
+        }
+    }
+}

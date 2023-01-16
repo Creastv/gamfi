@@ -1,0 +1,20 @@
+.hero{
+    padding: 60px 15px;
+    h1{
+        font-size: 66px;
+        margin-bottom: 20px;
+        @media #{$md}{
+            font-size: 50px;
+        }
+        @media #{$sm}{
+            font-size: 44px;
+        }
+        @media #{$xs}{
+            font-size: 36px;
+        }
+    }
+    p{
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+}

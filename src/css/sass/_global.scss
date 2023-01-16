@@ -1,0 +1,165 @@
+
+body{
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-weight: 300 ;
+    padding:0;
+    margin: 0;
+    overflow-x: hidden;
+    color:$p;
+}
+.wp-block {
+    max-width: 90%;
+}
+::-moz-selection { background: $main; color:#fff }
+::selection { background: $main; color:#fff }
+
+.container{
+    width: 1200px;
+    @media #{$sm}{
+        max-width: 100%;
+    }
+}
+.container-fluid{
+    padding-left: 150px;
+    padding-right: 150px;
+    @media #{$lg}{
+        padding-left:15px;
+        padding-right: 15px;
+    }
+    @media #{$xs}{
+        max-width: 100%;
+    }
+}
+
+
+
+.kk-star-ratings.kksr-valign-bottom{
+    margin-bottom: 50px;
+    display: block!important;
+    text-align: center;
+    // kksr-icon
+    .kksr-stars{
+        display: inline-block;
+        margin: 30px 0px;
+    }
+}
+
+
+.wp-block-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote{
+    border-left: 1px solid #ffb677;
+    margin: 54px 65px 44px 70px !important;
+    padding: 0 0 0 20px;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.78;
+    position: relative;
+    
+    p{
+        color: #6d70a6;
+    }
+}
+
+
+// cookies
+
+#cookie-notice{
+    
+    bottom: 30px!important;
+    margin-left: 5%;
+    max-width: 20%;
+    min-width: 300px;
+    left: 30px!important;
+    margin: 0;
+    .cookie-notice-container{
+
+    box-shadow: 0 0 20px 0 rgba(0,0,0,0.15);
+    border: 1px solid #eee!important;
+    border-radius:5px;
+        text-align: left;
+        // background: #fff!important;
+        color: #000!important;
+        padding: 25px 25px;
+
+        
+        #cn-notice-text{
+            font-size: 11px !important;
+            font-family: Roboto, Helvetica, Arial, sans-serif!important;
+            font-weight: 400!important;
+            line-height: 1.3;
+            color: #555555;
+            &:before{
+                content: ' ';
+                background-image: url('../img/gamfi-cookie-icon.png');
+                background-size: cover;
+                width: 2rem;
+                height: 2rem;
+                display: block;
+                position: absolute;
+                margin-left: -40px;
+                margin-top: -30px;
+            }
+        }
+        #cn-close-notice {
+            position: absolute;
+            right: 5px;
+            top: 15px;
+            &:before, &:after{
+                background-color: $main;
+                top: 3px!important;
+            }
+        }
+        #cn-notice-buttons{
+            display: none;
+        }
+    }
+}
+
+
+
+// add to any
+.a2a_floating_style { display: none; }
+.single .a2a_floating_style { display: block; }
+
+.has-black-color{
+    color:#222222!important;
+}
+.has-dark-color{
+    color:#555!important;
+}
+.has-blue-color{
+    color:#209aff!important;
+}
+.has-orange-color{
+    color:#ff7800!important;
+}
+.has-orange-light-color{
+    color:#FCE5CD!important;
+}
+.has-light-color{
+    color:#efefef!important;
+}
+
+
+.has-black-background-color{
+    background-color: #222222!important;
+}
+.has-dark-background-color{
+    background-color: #555!important;
+}
+.has-blue-background-color{
+    background-color: #209aff!important;
+}
+.has-orange-background-color{
+    background-color: #ff7800!important;
+}
+.has-orange-light-background-color{
+    background-color: #FCE5CD!important;
+}
+.has-light-background-color{
+    background-color: #efefef!important;
+}

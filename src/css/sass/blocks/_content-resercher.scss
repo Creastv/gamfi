@@ -1,0 +1,30 @@
+.content-reasercher {
+  .searchandfilter {
+    ul {
+      padding: 0;
+    }
+  }
+  .post-article {
+    a {
+      position: relative;
+      .label-pt {
+        position: absolute;
+        padding: 0px 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #ff7800;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid #ff7800;
+        border-radius: 5px;
+        transform: translate(10px, 10px);
+      }
+    }
+    .content {
+      height: initial !important;
+    }
+  }
+}
+
+.top-res {
+  position: relative;
+}

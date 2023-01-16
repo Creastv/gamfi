@@ -1,0 +1,50 @@
+.wp-block-cover{
+    margin-bottom: 30px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.alignleft {
+    text-align: left;
+}
+
+.alignright {
+	text-align: right;
+}
+
+.full-width{
+    width: 100vw;
+      margin-left: -50vw;
+      left: 50%;
+      position: relative;
+    //   background: red;
+    // @media #{$sm}{
+    //     width: 100%;
+    //     margin-left: 0;
+    //     left: 0;
+    // }
+}
+
+
+.title-animation {
+    h2{
+        font-size: 48px;
+        @media #{$md}{
+            font-size: 36px;
+        }
+        @media #{$sm}{
+            font-size: 30px;
+        }
+        @media #{$xs}{
+            font-size: 30px;
+        }
+    }
+}
