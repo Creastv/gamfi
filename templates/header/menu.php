@@ -40,13 +40,20 @@ $postId= get_the_ID();
                 } else {
                     $pos = 'dropdown-mega-menu-left';
                 }
+                $link = $mm['link'];
+                if( $link ){
+                    $link_url = $link['url'];
+                    $link_title = $link['title'];
+                    $link_target = $link['target'] ? $link['target'] : '_self'; 
+                    $linkid = url_to_postid( $link_url );
+                }
             ?>
 
             <?php if(!$mm['sub_menu']) { ?>
 
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-<?php echo $mm['link']; ?> nav-item  <?php if($postId == $mm['link'] ) { echo "current-menu-item"; }; ?> ">
-                <a itemprop="url" title=" <?php echo $mm['tekst_linku']; ?>" href="<?php the_permalink( $mm['link']); ?>" class="nav-link">
-                    <span> <?php echo $mm['tekst_linku']; ?></span>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-<?php echo $linkid; ?> nav-item  <?php if($postId ==  $linkid ) { echo "current-menu-item"; }; ?> ">
+                <a itemprop="url" title=" <?php echo $link_title; ?>" href="<?php echo $link_url; ?>" class="nav-link">
+                    <span> <?php echo $link_title; ?></span>
                 </a>
             </li>
 
@@ -54,7 +61,7 @@ $postId= get_the_ID();
 
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-<?php echo $mm['link']; ?>  <?php if($postId == $mm['link'] ) { echo "current-menu-item"; }; ?>nav-item">
                 <a itemprop="url" title=" <?php echo $mm['tekst_linku']; ?>" href="<?php the_permalink( $mm['link']); ?>" class="dropdown-toggle nav-link">
-                    <span> <?php echo $mm['tekst_linku']; ?></span>
+                    <span> <?php $mm['link']['title']; ?></span>
                 </a>
                 <div class="dropdown-menu dropdown-mega-menu  <?php echo $pos; ?> " aria-labelledby="menu-item-dropdown-<?php echo $mm['link']; ?>" role="menu">
                     <?php if($mm['tytul_glowny']) { ?>
@@ -66,6 +73,14 @@ $postId= get_the_ID();
                     <div class="wraper-megamenu">
                         <?php foreach($mm['kolumny'] as $kol){ 
                              $count = count($kol);
+                              
+                             $sublink = $mm['link'];
+                            if( $sublink ){
+                                $sublink_url = $sublink['url'];
+                                $sublink_title = $sublink['title'];
+                                $sublink_target = $sublink['target'] ? $link['target'] : '_self'; 
+                                $menulinkid = url_to_postid( $sublink_url );
+                            }
                         ?>
                         <div class="mm-col mm-col-<?php  echo $count; ?>">
                             <?php if($kol['tytul']) { ?>
@@ -75,9 +90,9 @@ $postId= get_the_ID();
                             <?php if($kol['menu']) { ?>
                             <ul>
                                 <?php foreach($kol['menu'] as $menu){ ?>
-                                <li itemprop="name" class="menu-item  nav-item menu-item-<?php echo $menu['link']; ?>  <?php if($postId == $menu['link'] ) { echo "current-menu-item active"; }; ?>">
-                                    <a itemprop="url" title="<?php echo $menu['tekst_linku']; ?>" href="<?php the_permalink( $menu['link']); ?>" class="dropdown-item">
-                                        <span><?php echo $menu['tekst_linku']; ?></span>
+                                <li itemprop="name" class="menu-item  nav-item menu-item-<?php echo $menulinkid; ?>  <?php if($postId == $menulinkid ) { echo "current-menu-item active"; }; ?>">
+                                    <a itemprop="url" title="<?php echo $sublink_title; ?>" href="<?php echo $sublink_url ; ?>" class="dropdown-item">
+                                        <span><?php echo $sublink_title; ?></span>
                                     </a>
                                 </li>
                                 <?php } ?>
