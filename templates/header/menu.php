@@ -72,7 +72,7 @@ $postId= get_the_ID();
                     <?php  if($mm['kolumny']){ ?>
                     <div class="wraper-megamenu">
                         <?php foreach($mm['kolumny'] as $kol){ 
-                             $count = count($kol);
+                             $count = count($mm['kolumny']);
                         ?>
                         <div class="mm-col mm-col-<?php  echo $count; ?>">
                             <?php if($kol['tytul']) { ?>
