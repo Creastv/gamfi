@@ -74,7 +74,7 @@ $postId= get_the_ID();
                         <?php foreach($mm['kolumny'] as $kol){ 
                              $count = count($kol);
                               
-                             $sublink = $mm['link'];
+                             $sublink = $kol['link'];
                             if( $sublink ){
                                 $sublink_url = $sublink['url'];
                                 $sublink_title = $sublink['title'];
