@@ -73,14 +73,6 @@ $postId= get_the_ID();
                     <div class="wraper-megamenu">
                         <?php foreach($mm['kolumny'] as $kol){ 
                              $count = count($kol);
-                              
-                             $sublink = $kol['link'];
-                            if( $sublink ){
-                                $sublink_url = $sublink['url'];
-                                $sublink_title = $sublink['title'];
-                                $sublink_target = $sublink['target'] ? $link['target'] : '_self'; 
-                                $menulinkid = url_to_postid( $sublink_url );
-                            }
                         ?>
                         <div class="mm-col mm-col-<?php  echo $count; ?>">
                             <?php if($kol['tytul']) { ?>
@@ -89,7 +81,15 @@ $postId= get_the_ID();
                             <?php ?>
                             <?php if($kol['menu']) { ?>
                             <ul>
-                                <?php foreach($kol['menu'] as $menu){ ?>
+                                <?php foreach($kol['menu'] as $menu){ 
+                                      $sublink = $menu['link'];
+                                    if( $sublink ){
+                                        $sublink_url = $sublink['url'];
+                                        $sublink_title = $sublink['title'];
+                                        $sublink_target = $sublink['target'] ? $link['target'] : '_self'; 
+                                        $menulinkid = url_to_postid( $sublink_url );
+                                    }
+                                ?>
                                 <li itemprop="name" class="menu-item  nav-item menu-item-<?php echo $menulinkid; ?>  <?php if($postId == $menulinkid ) { echo "current-menu-item active"; }; ?>">
                                     <a itemprop="url" title="<?php echo $sublink_title; ?>" href="<?php echo $sublink_url ; ?>" class="dropdown-item">
                                         <span><?php echo $sublink_title; ?></span>
