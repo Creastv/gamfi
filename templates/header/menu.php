@@ -1,6 +1,7 @@
 <?php 
 $megamenu_on = get_field('mega_menu_on', "options");
 $megamenu = get_field('mega_menu', "options");
+$postId= get_the_ID();
 
 ?>
 
@@ -34,8 +35,21 @@ $megamenu = get_field('mega_menu', "options");
         <ul id="menu-menu-glowne-new" class="navbar-nav">
 
             <?php foreach($megamenu as $mm) { ?>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-<?php echo $mm['link']; ?> nav-item"><a itemprop="url" title=" <?php echo $mm['tekst_linku']; ?>" href="<?php the_permalink( $mm['link']); ?>" class="nav-link"> <span> <?php echo $mm['tekst_linku']; ?></span></a>
-                <?php if($mm['sub_menu']) { ?>
+
+            <?php if(!$mm['sub_menu']) { ?>
+
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-<?php echo $mm['link']; ?> nav-item  <?php if($postId == $mm['link'] ) { echo "current-menu-item"; }; ?> ">
+                <a itemprop="url" title=" <?php echo $mm['tekst_linku']; ?>" href="<?php the_permalink( $mm['link']); ?>" class="nav-link">
+                    <span> <?php echo $mm['tekst_linku']; ?></span>
+                </a>
+            </li>
+
+            <?php } else { ?>
+
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-<?php echo $mm['link']; ?>  <?php if($postId == $mm['link'] ) { echo "current-menu-item"; }; ?> nav-item">
+                <a itemprop="url" title=" <?php echo $mm['tekst_linku']; ?>" href="<?php the_permalink( $mm['link']); ?>" class="dropdown-toggle nav-link">
+                    <span> <?php echo $mm['tekst_linku']; ?></span>
+                </a>
                 <div class="dropdown-menu dropdown-mega-menu" aria-labelledby="menu-item-dropdown-<?php echo $mm['link']; ?>" role="menu">
                     <?php if($mm['tytul_glowny']) { ?>
                     <div class="mm-title">
@@ -53,7 +67,11 @@ $megamenu = get_field('mega_menu', "options");
                             <?php if($kol['menu']) { ?>
                             <ul>
                                 <?php foreach($kol['menu'] as $menu){ ?>
-                                <li itemprop="name" class="menu-item nav-item"><a itemprop="url" title="<?php echo $menu['tekst_linku']; ?>" href="<?php the_permalink( $menu['link']); ?>" class="dropdown-item"> <span><?php echo $menu['tekst_linku']; ?></span></a></li>
+                                <li itemprop="name" class="menu-item  nav-item menu-item-<?php echo $menu['link']; ?>  <?php if($postId == $menu['link'] ) { echo "current-menu-item active"; }; ?>">
+                                    <a itemprop="url" title="<?php echo $menu['tekst_linku']; ?>" href="<?php the_permalink( $menu['link']); ?>" class="dropdown-item">
+                                        <span><?php echo $menu['tekst_linku']; ?></span>
+                                    </a>
+                                </li>
                                 <?php } ?>
                             </ul>
                             <?php } ?>
@@ -62,8 +80,9 @@ $megamenu = get_field('mega_menu', "options");
                     </div>
                     <?php  } ?>
                 </div>
-                <?php  } ?>
             </li>
+
+            <?php } ?>
             <?php } ?>
 
             <!-- <li itemprop="name" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-10388 nav-item"><a itemprop="url" title="Gamfi Onboarding" href="http://localhost/gamfi23/produkty/onboarding/" data-hover="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle nav-link" id="menu-item-dropdown-10388"> <span>Gamfi Onboarding</span></a>
