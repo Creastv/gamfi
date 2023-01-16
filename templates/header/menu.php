@@ -59,11 +59,11 @@ $postId= get_the_ID();
 
             <?php } else { ?>
 
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-<?php echo $mm['link']; ?>  <?php if($postId == $mm['link'] ) { echo "current-menu-item"; }; ?>nav-item">
-                <a itemprop="url" title=" <?php echo $mm['tekst_linku']; ?>" href="<?php the_permalink( $mm['link']); ?>" class="dropdown-toggle nav-link">
-                    <span> <?php $mm['link']['title']; ?></span>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-<?php echo $linkid; ?>  <?php if($postId == $linkid ) { echo "current-menu-item"; }; ?>nav-item">
+                <a itemprop="url" title="<?php echo $link_title; ?>" href="<?php echo $link_url; ?>" class="dropdown-toggle nav-link">
+                    <span> <?php echo $link_title; ?></span>
                 </a>
-                <div class="dropdown-menu dropdown-mega-menu  <?php echo $pos; ?> " aria-labelledby="menu-item-dropdown-<?php echo $mm['link']; ?>" role="menu">
+                <div class="dropdown-menu dropdown-mega-menu  <?php echo $pos; ?> " aria-labelledby="menu-item-dropdown-<?php echo $linkid; ?>" role="menu">
                     <?php if($mm['tytul_glowny']) { ?>
                     <div class="mm-title">
                         <span><?php echo $mm['tytul_glowny']; ?></span>
