@@ -11557,8 +11557,9 @@ blockquote p {
 .wraper-megamenu .mm-col > span {
   font-family: Merriweather, Georgia, serif;
   color: #ff7800;
-  margin-bottom: 20px;
-  padding: 0 10px 20px 10px;
+  margin-bottom: 10px;
+  padding: 0 10px 0px 10px;
+  display: block;
 }
 
 .wraper-megamenu .mm-col ul {
@@ -11582,7 +11583,7 @@ blockquote p {
   width: 100%;
   font-size: 21px;
   font-weight: 500;
-  padding: 0 0px 10px 30px;
+  padding: 0 0px 20px 30px;
 }
 
 #header.fadeIn {
