@@ -204,17 +204,24 @@ function my_acf_op_init() {
 			'parent_slug'	=> 'themes.php',
 		));
 
-		$languages = array( 'pl', 'en' );
+		// $languages = array( 'pl', 'en' );
 
-		foreach ( $languages as $lang ) {
-		  acf_add_options_sub_page( array(
-			'page_title' => 'Options (' . strtoupper( $lang ) . ')',
-			'menu_title' => __('Options (' . strtoupper( $lang ) . ')', 'text-domain'),
-			'menu_slug'  => "options-${lang}",
-			'post_id'    => $lang,
+		// foreach ( $languages as $lang ) {
+		//   acf_add_options_sub_page( array(
+		// 	'page_title' => 'Options (' . strtoupper( $lang ) . ')',
+		// 	'menu_title' => __('Options (' . strtoupper( $lang ) . ')', 'text-domain'),
+		// 	'menu_slug'  => "options-${lang}",
+		// 	'post_id'    => $lang,
+		// 	'parent'     => 'theme-general-settings'
+		//   ) );
+		// }
+		 acf_add_options_sub_page( array(
+			'page_title' => 'Options ',
+			'menu_title' => __('Options' , 'text-domain'),
+			'menu_slug'  => "options-pl",
+			'post_id'    => 'pl',
 			'parent'     => 'theme-general-settings'
 		  ) );
-		}
 		
 	}
 }
