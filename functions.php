@@ -218,8 +218,8 @@ function my_acf_op_init() {
 		 acf_add_options_sub_page( array(
 			'page_title' => 'Options ',
 			'menu_title' => __('Options' , 'text-domain'),
-			'menu_slug'  => "options-pl",
-			'post_id'    => 'pl',
+			'menu_slug'  => "options",
+			// 'post_id'    => '',
 			'parent'     => 'theme-general-settings'
 		  ) );
 		
