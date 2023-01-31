@@ -11579,7 +11579,7 @@ blockquote p {
   width: 33.3333%;
 }
 
-.mm-title {
+.mm-title a {
   width: 100%;
   font-size: 21px;
   font-weight: 500;
