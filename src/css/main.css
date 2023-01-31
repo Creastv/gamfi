@@ -11429,7 +11429,7 @@ blockquote p {
   display: none;
 }
 
-.mm-title a {
+.mm-title a span {
   margin: 10px 20px 20px;
   display: block;
   font-size: 18px !important;
