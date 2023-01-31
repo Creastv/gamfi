@@ -66,7 +66,7 @@ $postId= get_the_ID();
                 <div class="dropdown-menu dropdown-mega-menu  <?php echo $pos; ?> " aria-labelledby="menu-item-dropdown-<?php echo $linkid; ?>" role="menu">
                     <?php if($mm['tytul_glowny']) { ?>
                     <div class="mm-title">
-                        <span><?php echo $mm['tytul_glowny']; ?></span>
+                        <a href="<?php echo $mm['tytul_glowny']['url']; ?>"><?php echo $mm['tytul_glowny']['title']; ?></a>
                     </div>
                     <?php } ?>
                     <?php  if($mm['kolumny']){ ?>
