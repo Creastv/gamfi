@@ -1,3 +1,10 @@
+.mm-title a {
+  margin: 10px 20px 20px;
+  display: block;
+  font-size: 18px !important;
+  font-weight: bold !important;
+}
+
 #top-header {
   border-bottom: 1px solid#eeeeee;
   .wraper {
@@ -113,14 +120,6 @@
   }
   .mm-col-3 {
     width: 33.3333%;
-  }
-}
-.mm-title {
-  a {
-    margin: 10px 20px 20px;
-    display: block;
-    font-size: 18px !important;
-    font-weight: bold !important;
   }
 }
 
@@ -706,4 +705,11 @@
       }
     }
   }
+}
+
+.mm-title a {
+  margin: 10px 20px 20px;
+  display: block;
+  font-size: 18px !important;
+  font-weight: bold !important;
 }
