@@ -11569,6 +11569,7 @@ blockquote p {
 
 .wraper-megamenu .mm-col ul li a {
   min-width: 240px;
+  letter-spacing: initial !important;
 }
 
 .wraper-megamenu .mm-col-2 {
